@@ -76,3 +76,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+    application = ApplicationBuilder().token("YOUR_TOKEN").build()
+
+    application.add_handler(CommandHandler("start", start))
+    # thêm handler khác nếu có
+
+    application.run_polling()
+    
